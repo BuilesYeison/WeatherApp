@@ -1,5 +1,5 @@
-<main>
-  <section class="weather-app">
+<main [style.background-image]="backImage">
+  <section [style.backgroundColor]="appBackColor" class="weather-app">
     <img src="../assets/bgImage.svg" alt="">
     <app-searchbox (searchValue)="getWeatherInfo($event)"></app-searchbox>
     <app-main-info [weatherInfo]="weatherInfo"></app-main-info>
