@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 import {WeatherService} from "./weather.service" //import weather service
 
 @Component({
@@ -7,8 +7,14 @@ import {WeatherService} from "./weather.service" //import weather service
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private weather:WeatherService){
-    this.weather.getFromUserSelection("medellin").subscribe(data=>console.log(data));
+  constructor(private weather:WeatherService){}
+  weatherInfo:any = [];
+  city:string = "";
+  getWeatherInfo(value:string){
+    this.weather.getFromUserSelection(value).subscribe(data=>{
+      this.weatherInfo =  data
+      console.log(this.weatherInfo)
+    });
   }
 
 }
