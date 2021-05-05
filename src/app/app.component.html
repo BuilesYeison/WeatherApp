@@ -1,46 +1,8 @@
 <main>
   <section class="weather-app">
     <img src="../assets/bgImage.svg" alt="">
-    <form>
-      <div class="searchBox">
-        <i class='bx bx-search'></i>
-        <input type="text" placeholder="City">
-      </div>
-    </form>
-    <div class="main-info">
-      <p class="city">Medellín</p>
-      <div class="celsius-container">
-        <p class="number">33</p>
-        <p class="celsius">°C</p>
-      </div>
-    </div>
-  
-    <div class="details">
-      <p class="minmax">30°C min / 35°C max</p>
-      <div class="wind detail">
-        <div class="icon">
-          <i class='bx bx-wind' ></i>
-        </div>
-        <p class="wind-detail">2.57m/s</p>
-      </div>
-      <div class="wind detail">
-        <div class="icon">
-          <i class='bx bx-wind' ></i>
-        </div>
-        <p class="wind-detail">2.57m/s</p>
-      </div>
-      <div class="wind detail">
-        <div class="icon">
-          <i class='bx bx-wind' ></i>
-        </div>
-        <p class="wind-detail">2.57m/s</p>
-      </div>
-      <div class="wind detail">
-        <div class="icon">
-          <i class='bx bx-wind' ></i>
-        </div>
-        <p class="wind-detail">2.57m/s</p>
-      </div>
-    </div>
+    <app-searchbox></app-searchbox>
+    <app-main-info></app-main-info>
+    <app-details></app-details>
   </section>
 </main>
